@@ -7,7 +7,7 @@ from mss import mss
 import keyboard
 import serial 
 
-model = torch.hub.load(r'C:\AbsRekked\yolov5-master', 'custom', path=r'C:\Users\apple\Desktop\ai_in_game\scripts\best.pt', source='local')
+model = torch.hub.load(r'C:\gameai\yolov5-master', 'custom', path=r'C:\gameai\scripts\best.pt', source='local')
 arduino = serial.Serial("com9","115200", timeout = 0.1)
 
 def SendCordinates(code):
@@ -54,7 +54,7 @@ with mss() as sct:
 
             distance  = (head_level[0] -320, head_level[1] -320)
 
-            if keyboard.is_pressed('c'):
+            if keyboard.is_pressed('f'):
                 code = CalculateDistance(int(distance[0]), int(distance[1]))
                 SendCordinates(code)
                 sleep(0.175)
