@@ -18,7 +18,7 @@ while not flag:
     try:
         if keyboard.is_pressed('c'):
             
-            file_name = str(x) + "_2z.jpg"
+            file_name = str(x) + "_0.jpg"
             TakePicture()
             x = x + 1
             time.sleep(0.1)
